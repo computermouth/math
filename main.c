@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "add.h"
+#include "multiply.h"
 
 void usage(char * bin){
 	printf("usage:\n");
@@ -25,9 +25,9 @@ int main(int count, char *args[]){
 	int num1 = atoi(str_num1);
 	int num2 = atoi(str_num2);
 	
-	if ( str_op[0] == '+' ){
-		int sum = add(num1, num2);
-		printf("%d\n", sum);
+	if ( str_op[0] == 'x' ){
+		int total = multiply(num1, num2);
+		printf("%d\n", total);
 		return 0;
 	}
 	
