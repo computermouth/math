@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "multiply.h"
+#include "add.h"
+#include "sub.h"
 
 void usage(char * bin){
 	printf("usage:\n");
@@ -28,6 +30,18 @@ int main(int count, char *args[]){
 	if ( str_op[0] == 'x' ){
 		int total = multiply(num1, num2);
 		printf("%d\n", total);
+    return 0;
+  }
+  
+	if ( str_op[0] == '+' ){
+		int sum = add(num1, num2);
+		printf("%d\n", sum);
+		return 0;
+	}
+	
+	if (str_op[0] == '-' ){
+		int dif = sub(num1, num2);
+		printf("%d\n", dif);
 		return 0;
 	}
 	

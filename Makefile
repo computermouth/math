@@ -1,4 +1,4 @@
 
 
 all:
-	gcc main.c multiply.c -o math
+	gcc main.c add.c sub.c multiply.c -o math
