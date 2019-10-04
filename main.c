@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "multiply.h"
 #include "add.h"
 #include "sub.h"
 
@@ -26,19 +27,21 @@ int main(int count, char *args[]){
 	int num1 = atoi(str_num1);
 	int num2 = atoi(str_num2);
 	
+	if ( str_op[0] == 'x' ){
+		int total = multiply(num1, num2);
+		printf("%d\n", total);
+    return 0;
+  }
+  
 	if ( str_op[0] == '+' ){
 		int sum = add(num1, num2);
 		printf("%d\n", sum);
-	
-	
 		return 0;
-		
 	}
 	
 	if (str_op[0] == '-' ){
 		int dif = sub(num1, num2);
 		printf("%d\n", dif);
-		
 		return 0;
 	}
 	
